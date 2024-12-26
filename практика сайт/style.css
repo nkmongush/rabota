@@ -1,0 +1,406 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1410;
+    /* Темно-серый фон */
+    color: #f0e2d4;
+    /* Светлый текст */
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    color: #ffb347;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для header */
+header {
+    background-color: #2c221b;
+    /* Темно-серый фон для header */
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    /* Располагаем элементы в строку */
+
+}
+
+header nav ul li {
+    margin-left: 15px;
+}
+
+header nav ul li a {
+    color: #f0e2d4;
+    text-decoration: none;
+    padding: 8px 12px;
+    /* Отступы для лучшего вида */
+    transition: background-color 0.3s ease;
+    /* Плавный переход цвета */
+    border-radius: 4px;
+    /* Закругленные углы */
+}
+
+header nav ul li a:hover {
+    background-color: #332b26;
+    /* Цвет фона при наведении */
+    text-decoration: none;
+}
+
+
+header nav ul li a#current {
+    background-color: #ff8f00;
+    color: #1a1410;
+}
+
+header nav ul li a#current:hover {
+    text-decoration: none;
+    background-color: #d17200;
+}
+
+/* Стили для logo */
+#logo {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+
+}
+
+#logo img {
+    width: 70px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Стили для main */
+main {
+    padding: 20px;
+    margin-bottom: 40px;
+    /* Отступ от футера */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h1 {
+    color: #ffb347;
+    /* Светло-оранжевый цвет заголовка */
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.4;
+    /* Более узкие промежутки между строками */
+}
+
+#content h1 {
+    white-space: pre-line;
+}
+
+/* Стили для футера */
+footer {
+    background-color: #2c221b;
+    /* Темно-серый фон */
+    padding: 15px 0;
+    text-align: center;
+    color: #f0e2d4;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: auto;
+}
+
+
+/* Стили для галереи */
+.gallery {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    height: 500px;
+}
+
+.gallery img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transition: opacity 0.5s ease;
+}
+
+.gallery img.active {
+    display: block;
+}
+
+.gallery img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Стили для слайда*/
+.slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Центрируем по горизонтали */
+    padding: 20px;
+    width: 30%;
+    /* Фиксированная ширина */
+    background-color: #332b26;
+    /* Более темный оранжевый фон */
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #f0e2d4;
+}
+
+.slide input[type="text"],
+.slide input[type="date"] {
+    margin-bottom: 10px;
+    /* Отступ между полями */
+    padding: 10px;
+    /* Внутренний отступ */
+    border: 1px solid #4a3d34;
+    /* Рамка поля */
+    border-radius: 4px;
+    background-color: #2c221b;
+    /* Задний фон */
+    color: #f0e2d4;
+}
+
+.slide input[type="radio"] {
+    margin-right: 5px;
+}
+
+.slide input[type="submit"] {
+    background-color: #ff8f00;
+    /* Цвет фона кнопки */
+    color: #1a1410;
+    /* Цвет текста на кнопке */
+    padding: 10px 15px;
+    /* Отступы */
+    border: none;
+    /* Убираем рамку */
+    border-radius: 5px;
+    /* Закругленные углы */
+    cursor: pointer;
+    /* Меняем курсор на указатель */
+    transition: background-color 0.3s ease;
+    /* Анимация перехода */
+}
+
+.slide input[type="submit"]:hover {
+    background-color: #d17200;
+}
+
+#results {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+#btn {
+    background-color: #ff8f00;
+    /* Цвет фона кнопки */
+    color: #1a1410;
+    /* Цвет текста на кнопке */
+    padding: 10px 15px;
+    /* Отступы */
+    border: none;
+    /* Убираем рамку */
+    border-radius: 5px;
+    /* Закругленные углы */
+    cursor: pointer;
+    /* Меняем курсор на указатель */
+    transition: background-color 0.3s ease;
+    /* Анимация перехода */
+    margin-top: 10px;
+    /* Отступ от предыдущего элемента */
+}
+
+#btn:hover {
+    background-color: #d17200;
+}
+
+
+/* Стили для теста */
+#quiz {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: #332b26;
+    /* Более темный оранжевый фон */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #f0e2d4;
+    margin: 20px auto;
+    /* Отцентровка формы */
+}
+
+#quiz div {
+    margin-bottom: 15px;
+}
+
+#quiz input[type="text"],
+#quiz input[type="radio"] {
+    margin-right: 5px;
+    background-color: #2c221b;
+    border-radius: 4px;
+    color: #f0e2d4;
+    border: none;
+    padding: 5px;
+
+}
+
+#quiz input[type="submit"] {
+    background-color: #ff8f00;
+    /* Цвет фона кнопки */
+    color: #1a1410;
+    /* Цвет текста на кнопке */
+    padding: 10px 15px;
+    /* Отступы */
+    border: none;
+    /* Убираем рамку */
+    border-radius: 5px;
+    /* Закругленные углы */
+    cursor: pointer;
+    /* Меняем курсор на указатель */
+    transition: background-color 0.3s ease;
+    /* Анимация перехода */
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#quiz input[type="submit"]:hover {
+    background-color: #d17200;
+}
+
+.gallery-container {
+    display: flex;
+    align-items: center;
+    /* Вертикальное выравнивание по центру */
+    width: 80%;
+    margin: 20px auto;
+    position: relative;
+    /* Позиционирование относительно контейнера */
+    justify-content: center;
+}
+
+.gallery {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    /* Растягиваем галерею на всю ширину родителя */
+    border: 1px solid #ccc;
+    height: 500px;
+    margin: 0 10px;
+
+}
+
+.gallery img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transition: opacity 0.5s ease;
+}
+
+.gallery img.active {
+    display: block;
+}
+
+.gallery img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease;
+}
+
+.prev-button,
+.next-button {
+    background-color: #ff8f00;
+    /* Цвет фона кнопки */
+    color: #1a1410;
+    /* Цвет текста на кнопке */
+    padding: 10px 15px;
+    /* Отступы */
+    border: none;
+    /* Убираем рамку */
+    border-radius: 5px;
+    /* Закругленные углы */
+    cursor: pointer;
+    /* Меняем курсор на указатель */
+    transition: background-color 0.3s ease;
+    /* Анимация перехода */
+    margin: 0 10px;
+    /* Отступы от края и между кнопками */
+
+}
+
+.prev-button:hover,
+.next-button:hover {
+    background-color: #d17200;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    border: 1px solid #4a3d34;
+    border-radius: 4px;
+    background-color: #2c221b;
+    color: #f0e2d4;
+    margin-right: 10px;
+}
+
+.search-container button {
+    background-color: #ff8f00;
+    /* Цвет фона кнопки */
+    color: #1a1410;
+    /* Цвет текста на кнопке */
+    padding: 10px 15px;
+    /* Отступы */
+    border: none;
+    /* Убираем рамку */
+    border-radius: 5px;
+    /* Закругленные углы */
+    cursor: pointer;
+    /* Меняем курсор на указатель */
+    transition: background-color 0.3s ease;
+    /* Анимация перехода */
+}
+
+.search-container button:hover {
+    background-color: #d17200;
+}
+
+#searchResults {
+    text-align: center;
+    margin-top: 20px;
+}
